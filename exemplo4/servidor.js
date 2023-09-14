@@ -19,4 +19,6 @@ const monitorRequisicao = (req, res) =>{
             //o carregamento e leitura do 404.html
             break;
     }
+
+    
 }
