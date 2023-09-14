@@ -1,4 +1,4 @@
-
+import fetch  from "node-fetch";
 
 let url = "https://jsonplaceholder.typicode.com/posts/10";
 
