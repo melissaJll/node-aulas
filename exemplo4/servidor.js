@@ -1,24 +1,36 @@
-import http from 'http'; //importando o módul onativo http, mesmo sendo um módulo nativo, ainda assim precisamos do package.json
+import http from 'http'; // importando modulo nativo 'http'
 
-// criando uma função que vai monitorar as requisiçoes e respostas do servidor.
-const monitorRequisicao = (req, res) =>{
+//constante que monitora requisissões e recebe dois parâmetros req (requisição) e res (resposta) 
 
-    //configurando o cabeçalho de resposta para trabalhar com arquivos HTML e charset-utf-8
-    res.writeHead(200, {"Content-type" : "text/html; charset=utf8"});
+const monitorRequisicao = (req, res) => { //arrow function
 
-    //Avaliando requisição do usuario (a partir do link)
-    switch (req.url) {
-        case "/":
-            //o carregamento e leitura do index.html
+    //configurando o cabeçalho da resposta para trabalhar com arquivos html e charset-utf8
+    res.writeHead(200, {"Content-Type":"text/html; charset=utf8"});
+
+    //Avaliando cada requisição (a partir do link) url
+    switch(req.url){
+        case '/':
+            res.end('Servidor Node rodando no navegador!!')
+            //exibir index.html
             break;
-        case "/sobre":
-            //o carregamento e leitura do sobre.html
+        case '/sobre':
+            //exibir sobre.html
+            res.end('Servidor Node rodando Sobre!!')
             break;
-    
         default:
-            //o carregamento e leitura do 404.html
+            //exibir 404.html
             break;
-    }
+    };
 
-    
-}
+};
+
+//Criando o servidor http e indicando a função de requisiçoes
+//moduloHttp.create
+const servidor = http.createServer(monitorRequisicao);
+
+//iniciando a escuta do serv local na porta8080
+//servidor.listen(8080);// Já funciona mas é importante rodar a mensagem para ter certeza zque deu certo
+
+servidor.listen(8080, () => {
+    console.log("Servidor node rodando normalmente");
+})
