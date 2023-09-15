@@ -12,6 +12,14 @@
     <p>Página Inicial</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis libero eaque illum, iste dolores earum? Unde exercitationem, delectus sint incidunt error, officia sed reiciendis laboriosam, facere maxime quisquam blanditiis veritatis?</p>
 
-    <p><a href="/"></a> \ <a href="/sobre"></a> \ <a href="/contato"></a></p>
+    <ul>
+        <% for(banda of bandas) {%>
+        <li><%= banda %></li>
+        <% }%>
+    </ul>
+
+
+
+    <p><a href="/"></a> | <a href="/sobre">Sobre</a> | <a href="/contato">Contato</a></p>
 </body>
 </html>

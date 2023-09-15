@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "setembro_amarelo",
+  "version": "1.0.0",
+  "description": "exercicio sobre setembro amarelo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "melissa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
