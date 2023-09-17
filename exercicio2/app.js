@@ -1,16 +1,13 @@
 import express from "express";
-
-//Armazenando em var
 const app = express();
+app.set("view engine", "ejs");
 
-//Configurar a view engine com EJS
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res)=>{
-    res.render('paginas/index');
-});
-
-//Iniciar o servidor e escolher a porta
-app.listen(8081), () =>{
-    console.log('Servidor expressJs rodando normalmente')
-}
+app.get("/", (req, res) => {
+    res.render("pages/index");
+})
+app.get("/404", (req, res) => {
+    res.render("pages/404");
+})
+app.listen(3000, () => {
+    console.log("Servidor expressJS rodando!");
+})
