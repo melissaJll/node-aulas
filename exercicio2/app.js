@@ -1,5 +1,7 @@
 import express from "express";
 const app = express();
+
+//suporte a ejs
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {

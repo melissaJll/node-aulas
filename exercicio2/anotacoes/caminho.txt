@@ -1,0 +1,18 @@
+exercicio 2
+npm init e preecher -> package json criado
+entrypoint app.js
+criar app.js
+package-json -> node type module
+comando Express npm install express -> cria pasta_modules
+importar express no app.js
+colocar em uma variavel
+
+npm install ejs
+configurar view (app.js) ejs
+
+criar pasta view|paginas
+criar html simples na pasta .ejs
+
+criar rotas (app.js)
+
+Iniciar o servidor e escolher a porta
